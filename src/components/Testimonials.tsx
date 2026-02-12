@@ -22,7 +22,7 @@ const Testimonials = () => {
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-8">
-                    {images.testimonials.map((item, index) => (
+                    {images.testimonials.map((item: { content: string; image: string; name: string; role: string }, index: number) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 30 }}

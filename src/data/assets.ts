@@ -85,4 +85,25 @@ export const images = {
     about: {
         portrait: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop"
     },
+
+    testimonials: [
+        {
+            name: "Sarah Johnson",
+            role: "CEO at TechFlow",
+            content: "The attention to detail and creative vision brought to our project was exceptional. Highly recommended!",
+            image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop"
+        },
+        {
+            name: "Michael Chen",
+            role: "Product Manager",
+            content: "Incredible speed and quality. The final product exceeded our expectations in every way possible.",
+            image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop"
+        },
+        {
+            name: "Emma Williams",
+            role: "Marketing Director",
+            content: "A perfect blend of technical expertise and artistic flair. They truly understand modern business needs.",
+            image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop"
+        }
+    ]
 };
