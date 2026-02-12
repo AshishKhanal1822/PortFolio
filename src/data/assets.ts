@@ -85,25 +85,4 @@ export const images = {
     about: {
         portrait: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop"
     },
-
-    testimonials: [
-        {
-            name: "Alex Johnson",
-            role: "CEO, TechStart",
-            content: "Prafull transformed our outdated website into a modern, high-converting platform. The attention to detail is unmatched.",
-            image: "https://randomuser.me/api/portraits/men/32.jpg"
-        },
-        {
-            name: "Sarah Williams",
-            role: "Marketing Director",
-            content: "Working with Prafull was a breeze. He understood our brand vision immediately and delivered beyond our expectations.",
-            image: "https://randomuser.me/api/portraits/women/44.jpg"
-        },
-        {
-            name: "David Chen",
-            role: "Founder, Creative Agency",
-            content: "One of the best frontend developers I've worked with. Clean code, great design sense, and always on time.",
-            image: "https://randomuser.me/api/portraits/men/85.jpg"
-        }
-    ]
 };
