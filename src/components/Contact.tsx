@@ -15,6 +15,7 @@ const Contact = () => {
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [phoneError, setPhoneError] = useState('');
 
     // Listen for plan selection from Plans component
     useEffect(() => {
@@ -58,14 +59,52 @@ const Contact = () => {
     }, []);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+        const { name, value } = e.target;
         setFormData({
             ...formData,
-            [e.target.name]: e.target.value
+            [name]: value
         });
+
+        // Real-time Nepal Phone Validation
+        if (name === 'phone') {
+            if (value === '') {
+                setPhoneError('');
+            } else {
+                const phoneRegex = /^(98|97)\d{8}$/;
+                // Check if it's potentially valid or already fully valid
+                if (!/^(9|98|97)\d*$/.test(value)) {
+                    setPhoneError('Number must start with 98 or 97');
+                } else if (value.length > 0 && !value.startsWith('98') && !value.startsWith('97') && value.length >= 2) {
+                    setPhoneError('Number must start with 98 or 97');
+                } else if (value.length > 10) {
+                    setPhoneError('Phone number cannot exceed 10 digits');
+                } else if (value.length === 10 && !phoneRegex.test(value)) {
+                    setPhoneError('Invalid format. Must be 10 digits starting with 98 or 97');
+                } else if (value.length < 10 && value.length > 0) {
+                    // Provide a subtle hint or wait until 10 digits to show error? 
+                    // Let's show "Too short" if they've typed a bit but not enough
+                    if (value.length >= 3) {
+                        setPhoneError('Phone number must be 10 digits');
+                    } else {
+                        setPhoneError('');
+                    }
+                } else {
+                    setPhoneError('');
+                }
+            }
+        }
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
+        // Nepal Phone Validation
+        const phoneRegex = /^(98|97)\d{8}$/;
+        if (formData.phone && !phoneRegex.test(formData.phone)) {
+            setPhoneError('Please enter a valid Nepal phone number starting with 98 or 97 (10 digits).');
+            return;
+        }
+
         setIsSubmitting(true);
 
         try {
@@ -223,9 +262,13 @@ const Contact = () => {
                                                 name="phone"
                                                 value={formData.phone}
                                                 onChange={handleChange}
-                                                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition-all"
-                                                placeholder="+1 (555) 000-0000"
+                                                className={`w-full px-4 py-3 bg-white/5 border rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 transition-all ${phoneError ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20' : 'border-white/10 focus:border-pink-500 focus:ring-pink-500/20'
+                                                    }`}
+                                                placeholder="98XXXXXXXX / 97XXXXXXXX"
                                             />
+                                            {phoneError && (
+                                                <p className="mt-1 text-xs text-red-500">{phoneError}</p>
+                                            )}
                                         </div>
                                     </div>
 
