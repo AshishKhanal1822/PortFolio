@@ -14,7 +14,7 @@ const Marquee = ({ images, direction, speed, className }: { images: string[], di
     return (
         <div className={`flex w-full overflow-hidden whitespace-nowrap ${className}`}>
             <motion.div
-                className="flex gap-6 shrink-0 w-max"
+                className="flex shrink-0 w-max"
                 initial={{ x: direction === 'left' ? 0 : '-50%' }}
                 animate={{ x: direction === 'left' ? '-50%' : 0 }}
                 transition={{
@@ -24,16 +24,18 @@ const Marquee = ({ images, direction, speed, className }: { images: string[], di
                 }}
                 style={{ willChange: 'transform' }}
             >
-                {/* Duplicated once to ensure seamless loop with fewer DOM nodes */}
-                {[...images, ...images].map((img, i) => (
-                    <div key={i} className="w-[200px] h-[300px] shrink-0 rounded-2xl overflow-hidden border border-white/20 shadow-2xl relative bg-[#1a1a1a]">
-                        <div className="absolute inset-0 bg-black/10 z-[1]" />
-                        <img
-                            src={img}
-                            alt=""
-                            loading="lazy"
-                            className="w-full h-full object-cover opacity-100"
-                        />
+                {/* 8x duplication handles any screen size including triple-monitors or ultra-wides without popping */}
+                {[...images, ...images, ...images, ...images, ...images, ...images, ...images, ...images].map((img, i) => (
+                    <div key={i} className="w-[200px] h-[300px] pr-6 shrink-0 rounded-2xl overflow-hidden shadow-2xl relative">
+                        <div className="relative w-full h-full rounded-2xl overflow-hidden border border-white/20 bg-[#1a1a1a]">
+                            <div className="absolute inset-0 bg-black/10 z-[1]" />
+                            <img
+                                src={img}
+                                alt=""
+                                loading="lazy"
+                                className="w-full h-full object-cover opacity-100"
+                            />
+                        </div>
                     </div>
                 ))}
             </motion.div>
@@ -57,9 +59,9 @@ const Hero = () => {
                 className="absolute inset-0 z-[1] flex flex-col justify-center gap-8 opacity-100 pointer-events-none rotate-[-6deg] scale-[1.15] origin-center"
                 style={{ transformStyle: 'preserve-3d', willChange: 'transform' }}
             >
-                <Marquee images={thumbnails} direction="left" speed={30} />
-                <Marquee images={thumbnails} direction="right" speed={35} className="-ml-24" />
-                <Marquee images={thumbnails} direction="left" speed={40} />
+                <Marquee images={thumbnails} direction="left" speed={80} />
+                <Marquee images={thumbnails} direction="right" speed={90} className="-ml-24" />
+                <Marquee images={thumbnails} direction="left" speed={100} />
             </div>
 
             {/* 3. Gradient Overlay */}

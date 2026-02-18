@@ -38,8 +38,7 @@ const About = () => {
                             Designer. Developer. Strategist.
                         </h3>
                         <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                            I'm a multidisciplinary creative based in Kathmandu. With a deep passion for digital aesthetics and functional design,
-                            I bridge the gap between "looking good" and "working well".
+                            Hi, I'm Prafull, a passionate & creative Graphic Designer with 5 years of experience dedicated to transforming ideas into visually compelling experiences. With a strong foundation in design principles and a keen eye for aesthetics, I specialize in branding, digital illustrations, marketing visuals, and user-centric designs. My approach combines creativity with strategic thinking to craft visuals that not only look great but also communicate effectively. I help businesses scale through purposeful design and innovative creative direction. Let’s build something extraordinary.
                         </p>
                         <p className="text-gray-400 text-lg leading-relaxed mb-8">
                             My approach is simple: I treat every project as my own. Whether it's a minimal thumbnail or a complex designs,
@@ -48,11 +47,11 @@ const About = () => {
 
                         <div className="grid grid-cols-2 gap-8 mb-12">
                             <div>
-                                <h4 className="text-3xl font-bold text-white mb-1">3+</h4>
+                                <h4 className="text-3xl font-bold text-white mb-1">5+</h4>
                                 <p className="text-sm text-gray-500 uppercase tracking-widest">Years Experience</p>
                             </div>
                             <div>
-                                <h4 className="text-3xl font-bold text-white mb-1">50+</h4>
+                                <h4 className="text-3xl font-bold text-white mb-1">100+</h4>
                                 <p className="text-sm text-gray-500 uppercase tracking-widest">Projects Done</p>
                             </div>
                         </div>
@@ -64,7 +63,7 @@ const About = () => {
                                 Tools & Expertise
                             </h4>
                             <div className="flex flex-wrap gap-2">
-                                {["React", "TypeScript", "Node.js", "Figma", "Tailwind", "Motion", "UI/UX", "Branding"].map((skill, i) => (
+                                {["Adobe Photoshop", "Adobe Illustrator", "Figma", "Adobe InDesign", "Canva", "Branding"].map((skill, i) => (
                                     <motion.span
                                         key={skill}
                                         initial={{ opacity: 0, scale: 0.9 }}

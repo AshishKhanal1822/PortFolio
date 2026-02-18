@@ -4,6 +4,9 @@ import thumb3 from '../assets/Images/Background Floating Thumbnail/P.M(S.K).jpg'
 import thumb4 from '../assets/Images/Background Floating Thumbnail/ads.jpg';
 import thumb5 from '../assets/Images/Background Floating Thumbnail/kuma sagar and the band.jpg';
 import thumb6 from '../assets/Images/Background Floating Thumbnail/two.jpg';
+import Portrait from '../assets/Prafull.png';
+
+
 
 export const images = {
     hero: {
@@ -86,7 +89,7 @@ export const images = {
     ],
 
     about: {
-        portrait: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop"
+        portrait: Portrait
     },
 
     testimonials: [
