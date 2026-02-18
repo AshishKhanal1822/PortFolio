@@ -376,8 +376,8 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-white font-semibold mb-1">Email</h4>
-                                    <a href="mailto:hello@prafull.com" className="text-gray-400 hover:text-pink-500 transition-colors">
-                                        hello@prafull.com
+                                    <a href="mailto:prafulpradhan104@gmail.com" className="text-gray-400 hover:text-pink-500 transition-colors">
+                                        prafulpradhan104@gmail.com
                                     </a>
                                 </div>
                             </div>
@@ -410,7 +410,7 @@ const Contact = () => {
                             <h4 className="text-white font-semibold mb-4">Follow Me</h4>
                             <div className="flex gap-4">
                                 <a
-                                    href="#"
+                                    href="https://www.instagram.com/ji_prafull_pradhan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                                     className="p-3 bg-white/5 border border-white/10 rounded-lg hover:border-pink-500 hover:bg-pink-500/10 transition-all group"
                                     aria-label="Instagram"
                                 >

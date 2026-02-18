@@ -1,17 +1,20 @@
-// Replace these URLs with your own image paths (e.g., "/assets/my-image.jpg")
+import thumb1 from '../assets/Images/Background Floating Thumbnail/1( post ).jpg';
+import thumb2 from '../assets/Images/Background Floating Thumbnail/Modular Kitchen 3.jpg';
+import thumb3 from '../assets/Images/Background Floating Thumbnail/P.M(S.K).jpg';
+import thumb4 from '../assets/Images/Background Floating Thumbnail/ads.jpg';
+import thumb5 from '../assets/Images/Background Floating Thumbnail/kuma sagar and the band.jpg';
+import thumb6 from '../assets/Images/Background Floating Thumbnail/two.jpg';
 
 export const images = {
     hero: {
         // The scrolling thumbnails behind the hero text
         thumbnails: [
-            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-            "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&q=80",
-            "https://images.unsplash.com/photo-1523474253062-5e4ead0d5752?w=800&q=80",
-            "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
-            "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80",
-            "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80",
-            "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=800&q=80",
-            "https://images.unsplash.com/photo-1558655146-d09347e0ad6a?w=800&q=80"
+            thumb1,
+            thumb2,
+            thumb3,
+            thumb4,
+            thumb5,
+            thumb6
         ]
     },
 

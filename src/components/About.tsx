@@ -42,7 +42,7 @@ const About = () => {
                             I bridge the gap between "looking good" and "working well".
                         </p>
                         <p className="text-gray-400 text-lg leading-relaxed mb-8">
-                            My approach is simple: I treat every project as my own. Whether it's a minimal portfolio or a complex web app,
+                            My approach is simple: I treat every project as my own. Whether it's a minimal thumbnail or a complex designs,
                             I bring maximum effort and attention to detail.
                         </p>
 

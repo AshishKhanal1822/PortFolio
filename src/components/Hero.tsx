@@ -1,86 +1,11 @@
-import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, ArrowDown } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ArrowDown } from 'lucide-react';
 import { images } from '../data/assets';
-import { useState, useEffect } from 'react';
 
 const MagicText = () => {
-    const letters = "Magic".split("");
-    const [index, setIndex] = useState(0);
-    const modes = ['fall', 'blocks', 'flip', 'slide'] as const;
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setIndex((prev) => (prev + 1) % modes.length);
-        }, 4000); // Cycle every 4 seconds
-        return () => clearInterval(interval);
-    }, []);
-
-    const currentMode = modes[index];
-
-    const container = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1,
-                delayChildren: 0.2
-            }
-        },
-        exit: {
-            opacity: 0,
-            transition: {
-                staggerChildren: 0.05,
-                staggerDirection: -1
-            }
-        }
-    } as const;
-
-    const variants = {
-        fall: {
-            hidden: { y: -60, opacity: 0, rotate: -20 },
-            visible: { y: 0, opacity: 1, rotate: 0, transition: { type: "spring", bounce: 0.5 } },
-            exit: { y: 30, opacity: 0, rotate: 20 }
-        },
-        blocks: {
-            hidden: { y: 40, opacity: 0, scale: 0 },
-            visible: { y: 0, opacity: 1, scale: 1, transition: { type: "spring", stiffness: 200 } },
-            exit: { y: -40, opacity: 0, scale: 0.5 }
-        },
-        flip: {
-            hidden: { rotateX: -90, opacity: 0 },
-            visible: { rotateX: 0, opacity: 1, transition: { duration: 0.6 } },
-            exit: { rotateX: 90, opacity: 0 }
-        },
-        slide: {
-            hidden: { x: -30, opacity: 0, skewX: -20 },
-            visible: { x: 0, opacity: 1, skewX: 0, transition: { type: "spring", damping: 12 } },
-            exit: { x: 30, opacity: 0, skewX: 20 }
-        }
-    } as const;
-
     return (
-        <span className="relative inline-flex pb-2 min-w-[150px] justify-center" style={{ perspective: '1000px' }}>
-            <AnimatePresence mode="wait">
-                <motion.span
-                    key={currentMode}
-                    variants={container}
-                    initial="hidden"
-                    animate="visible"
-                    exit="exit"
-                    className="inline-flex text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 filter drop-shadow-[0_0_20px_rgba(124,58,237,0.5)]"
-                >
-                    {letters.map((letter, i) => (
-                        <motion.span
-                            key={i}
-                            variants={variants[currentMode]}
-                            className="inline-block"
-                            style={{ transformOrigin: 'center center' }}
-                        >
-                            {letter}
-                        </motion.span>
-                    ))}
-                </motion.span>
-            </AnimatePresence>
+        <span className="relative inline-flex pb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 filter drop-shadow-[0_0_20px_rgba(124,58,237,0.5)]">
+            Magic
         </span>
     );
 };
@@ -97,12 +22,18 @@ const Marquee = ({ images, direction, speed, className }: { images: string[], di
                     repeat: Infinity,
                     ease: "linear"
                 }}
+                style={{ willChange: 'transform' }}
             >
-                {/* Quadruple duplication to ensure coverage on large screens */}
-                {[...images, ...images, ...images, ...images].map((img, i) => (
+                {/* Duplicated once to ensure seamless loop with fewer DOM nodes */}
+                {[...images, ...images].map((img, i) => (
                     <div key={i} className="w-[300px] h-[200px] shrink-0 rounded-2xl overflow-hidden border border-white/20 shadow-2xl relative bg-[#1a1a1a]">
                         <div className="absolute inset-0 bg-black/10 z-[1]" />
-                        <img src={img} alt="" className="w-full h-full object-cover opacity-100 hover:grayscale-0 transition-all duration-500" />
+                        <img
+                            src={img}
+                            alt=""
+                            loading="lazy"
+                            className="w-full h-full object-cover opacity-100"
+                        />
                     </div>
                 ))}
             </motion.div>
@@ -122,10 +53,13 @@ const Hero = () => {
             </div>
 
             {/* 2. Moving Project Layers (Z-0, but above background) */}
-            <div className="absolute inset-0 z-[1] flex flex-col justify-center gap-8 opacity-100 pointer-events-none rotate-[-6deg] scale-[1.15] origin-center">
-                <Marquee images={thumbnails.slice(0, 4)} direction="left" speed={25} />
-                <Marquee images={thumbnails.slice(4)} direction="right" speed={30} className="-ml-24" />
-                <Marquee images={thumbnails} direction="left" speed={35} />
+            <div
+                className="absolute inset-0 z-[1] flex flex-col justify-center gap-8 opacity-100 pointer-events-none rotate-[-6deg] scale-[1.15] origin-center"
+                style={{ transformStyle: 'preserve-3d', willChange: 'transform' }}
+            >
+                <Marquee images={thumbnails} direction="left" speed={30} />
+                <Marquee images={thumbnails} direction="right" speed={35} className="-ml-24" />
+                <Marquee images={thumbnails} direction="left" speed={40} />
             </div>
 
             {/* 3. Gradient Overlay */}
@@ -144,7 +78,6 @@ const Hero = () => {
                     transition={{ duration: 0.8 }}
                     className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/10 mb-8 backdrop-blur-md shadow-lg"
                 >
-                    <Sparkles className="w-4 h-4 text-yellow-400" />
                     <span className="text-sm font-medium text-gray-200">Available for Freelance Projects</span>
                 </motion.div>
 
@@ -164,7 +97,7 @@ const Hero = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.3 }}
                 >
-                    I help you grab your audience's attention with premium web design,
+                    I help you grab your audience's attention with premium thumbnails,
                     strategic development, and visuals that convert.
                 </motion.p>
 

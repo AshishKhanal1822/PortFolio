@@ -192,7 +192,7 @@ const Plans = () => {
                     className="text-center mt-16"
                 >
                     <p className="text-gray-400">
-                        Need a custom solution? <button onClick={() => scrollToContact('Enterprise')} className="text-pink-500 hover:text-pink-400 font-semibold underline">Let's talk</button>
+                        Need a custom solution? <a href="tel:+9779800000000" className="text-pink-500 hover:text-pink-400 font-semibold underline cursor-pointer">Let's talk</a>
                     </p>
                 </motion.div>
             </div>

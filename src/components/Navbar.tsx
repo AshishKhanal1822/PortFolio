@@ -17,8 +17,8 @@ const Navbar = () => {
         { name: 'Featured', href: '#featured' }, // "App" from implied context, user asked for "Featured"
         { name: 'My Work', href: '#work' },
         { name: 'About Me', href: '#about' },
-        { name: 'Pricing', href: '#plans' },
         { name: 'Testimonials', href: '#testimonials' },
+        { name: 'Pricing', href: '#plans' },
         { name: 'Contact', href: '#contact' },
     ];
 
