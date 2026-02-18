@@ -143,7 +143,7 @@ const Contact = () => {
             });
         } catch (error) {
             console.error("EmailJS Error:", error);
-            alert("Oops! Something went wrong. Please try again or email me directly at hello@prafull.com");
+            alert("Oops! Something went wrong. Please try again or email me directly at prafulpradhan104@gmail.com");
         } finally {
             setIsSubmitting(false);
         }

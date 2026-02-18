@@ -26,7 +26,7 @@ const Marquee = ({ images, direction, speed, className }: { images: string[], di
             >
                 {/* Duplicated once to ensure seamless loop with fewer DOM nodes */}
                 {[...images, ...images].map((img, i) => (
-                    <div key={i} className="w-[300px] h-[200px] shrink-0 rounded-2xl overflow-hidden border border-white/20 shadow-2xl relative bg-[#1a1a1a]">
+                    <div key={i} className="w-[200px] h-[300px] shrink-0 rounded-2xl overflow-hidden border border-white/20 shadow-2xl relative bg-[#1a1a1a]">
                         <div className="absolute inset-0 bg-black/10 z-[1]" />
                         <img
                             src={img}
