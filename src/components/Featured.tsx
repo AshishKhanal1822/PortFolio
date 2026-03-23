@@ -22,13 +22,13 @@ const Featured = () => {
     return (
         <section id="featured" className="py-24 bg-[#030014]">
             {/* Featured Works Section */}
-            <div className="container">
+            <div className="w-full px-6 md:px-12">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">Featured <span className="text-gray-600">Works.</span></h2>
                     <p className="text-gray-400 max-w-lg mx-auto">A selection of projects that I'm particularly proud of, showcasing range and depth.</p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <div className="grid md:grid-cols-3 gap-8">
                     {images.featured.map((item, i) => (
                         <motion.div
                             key={i}
@@ -65,7 +65,7 @@ const Featured = () => {
             </div>
 
             {/* Logo Marquee */}
-            <div className="overflow-hidden py-10 border-y border-white/5 bg-white/5 backdrop-blur-sm">
+            <div className="overflow-hidden py-10 bg-white/5 backdrop-blur-sm">
                 <motion.div
                     className="flex items-center gap-20 w-max"
                     initial={{ x: 0 }}

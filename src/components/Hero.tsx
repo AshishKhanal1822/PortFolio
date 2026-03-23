@@ -51,7 +51,7 @@ const Hero = () => {
             {/* 1. Dynamic Background Blobs */}
             <div className="absolute inset-0 w-full h-full pointer-events-none">
                 <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-purple-600/30 rounded-full blur-[120px]" />
-                <div className="absolute bottom-[20%] right-[-5%] w-[400px] h-[400px] bg-blue-600/30 rounded-full blur-[120px]" />
+                <div className="absolute bottom-[30%] right-[-5%] w-[400px] h-[400px] bg-blue-600/30 rounded-full blur-[120px]" />
             </div>
 
             {/* 2. Moving Project Layers (Z-0, but above background) */}
@@ -72,7 +72,7 @@ const Hero = () => {
 
 
             {/* 4. Main Content (Z-10) */}
-            <div className="container relative z-10 text-center flex flex-col items-center">
+            <div className="w-full px-6 md:px-12 relative z-10 text-center flex flex-col items-center">
 
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}

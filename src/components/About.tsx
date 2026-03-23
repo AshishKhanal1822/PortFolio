@@ -4,8 +4,8 @@ import { images } from '../data/assets';
 const About = () => {
     return (
         <section id="about" className="py-24 bg-[#030014] overflow-hidden">
-            <div className="container">
-                <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+            <div className="w-full px-6 md:px-12">
+                <div className="grid lg:grid-cols-2 gap-16 items-center">
 
                     <motion.div
                         className="relative"
