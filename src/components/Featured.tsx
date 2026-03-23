@@ -22,13 +22,13 @@ const Featured = () => {
     return (
         <section id="featured" className="py-24 bg-[#030014]">
             {/* Featured Works Section */}
-            <div className="container px-6 mb-24">
+            <div className="container">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">Featured <span className="text-gray-600">Works.</span></h2>
                     <p className="text-gray-400 max-w-lg mx-auto">A selection of projects that I'm particularly proud of, showcasing range and depth.</p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
                     {images.featured.map((item, i) => (
                         <motion.div
                             key={i}

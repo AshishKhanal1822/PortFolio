@@ -31,7 +31,7 @@ const Navbar = () => {
                     }`}
             >
                 <div className="container mx-auto px-6">
-                    <div className={`glass-nav rounded-full px-6 py-3 flex items-center justify-between shadow-lg shadow-purple-500/10`}>
+                    <div className={`glass-nav rounded-full px-6 py-3 flex items-center justify-between shadow-lg shadow-purple-500/10 max-w-7xl mx-auto`}>
                         {/* Logo */}
                         <a href="#" className="flex items-center gap-2">
                             <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-blue-500 to-purple-600 flex items-center justify-center font-bold text-white text-lg font-display">

@@ -21,7 +21,7 @@ const Testimonials = () => {
                     <p className="text-gray-400">Whatever your goal, we'll help you get there.</p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
                     {images.testimonials.map((item: { content: string; image: string; name: string; role: string }, index: number) => (
                         <motion.div
                             key={index}

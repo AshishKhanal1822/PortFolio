@@ -155,7 +155,7 @@ const Contact = () => {
             <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-transparent to-transparent" />
             <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-pink-500/5 rounded-full blur-3xl" />
 
-            <div className="container px-6 relative z-10">
+            <div className="container relative z-10">
                 <div className="text-center mb-16">
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -185,7 +185,7 @@ const Contact = () => {
                     </motion.p>
                 </div>
 
-                <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
                     {/* Contact Form */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}

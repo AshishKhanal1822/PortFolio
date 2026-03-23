@@ -41,11 +41,7 @@ export const images = {
             client: "Tech Innovations Inc.",
             duration: "6 months",
             technologies: ["React", "Node.js", "PostgreSQL", "AWS", "TypeScript"],
-            gallery: [
-                "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1964&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
-                "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
-            ]
+
         },
         {
             title: "Neon Branding",
@@ -56,11 +52,7 @@ export const images = {
             client: "Neon Digital Agency",
             duration: "3 months",
             technologies: ["Adobe Illustrator", "Figma", "After Effects", "Photoshop"],
-            gallery: [
-                "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80",
-                "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&q=80"
-            ]
+
         },
         {
             title: "Fintech Dashboard",
@@ -71,11 +63,7 @@ export const images = {
             client: "FinanceFlow Solutions",
             duration: "4 months",
             technologies: ["Figma", "React", "D3.js", "Tailwind CSS", "Chart.js"],
-            gallery: [
-                "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
-                "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80"
-            ]
+
         }
     ],
 

@@ -72,7 +72,7 @@ const Hero = () => {
 
 
             {/* 4. Main Content (Z-10) */}
-            <div className="container px-6 relative z-10 text-center flex flex-col items-center">
+            <div className="container relative z-10 text-center flex flex-col items-center">
 
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}

@@ -4,8 +4,8 @@ import { images } from '../data/assets';
 const About = () => {
     return (
         <section id="about" className="py-24 bg-[#030014] overflow-hidden">
-            <div className="container px-6">
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="container">
+                <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
 
                     <motion.div
                         className="relative"
@@ -35,7 +35,7 @@ const About = () => {
                             Who is <span className="text-gradient">Prafull?</span>
                         </h2>
                         <h3 className="text-2xl text-white font-medium mb-6">
-                            Designer. Developer. Strategist.
+                            Brand Strategist.  Graphics Design Mentor.
                         </h3>
                         <p className="text-gray-400 text-lg leading-relaxed mb-6">
                             Hi, I'm Prafull, a passionate & creative Graphic Designer with 5 years of experience dedicated to transforming ideas into visually compelling experiences. With a strong foundation in design principles and a keen eye for aesthetics, I specialize in branding, digital illustrations, marketing visuals, and user-centric designs. My approach combines creativity with strategic thinking to craft visuals that not only look great but also communicate effectively. I help businesses scale through purposeful design and innovative creative direction. Let’s build something extraordinary.
